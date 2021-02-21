@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MQTTBrowser</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            var oFrame = document.getElementById("webloader");
+            oFrame.contentWindow.document.onclick = function() {
+                alert("frame contents clicked");
+            };
+        };
+        </script>
+</head>
+
+<body>
+
+    <div>
+        <p>Welcome to the MQTT browser</p>
+        <form action = "/search" method = "post">
+            <div class="form-group">
+                <label for="inputWeb">Web Page</label>
+                <input type="text" name="route" class="form-control" id="inputWeb" placeholder="Enter webpage">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <a class="btn btn-primary" href="/" role="button">Homepage</a>
+        <div class="embed-responsive embed-responsive-21by9">
+            <iframe class="embed-responsive-item" id = "webloader" srcdoc="{{code}}"></iframe>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
